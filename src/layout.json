@@ -1,0 +1,222 @@
+{
+  "width": 22,
+  "length": 64,
+  "area": 1408,
+  "bounds": {
+    "minX": -9.65,
+    "maxX": 9.65,
+    "minZ": -31,
+    "maxZ": 31.5
+  },
+  "entrance": {
+    "position": [
+      0,
+      2.15,
+      31
+    ],
+    "target": [
+      0,
+      3.25,
+      20
+    ]
+  },
+  "shop": {
+    "position": [
+      7.1,
+      0,
+      29
+    ],
+    "view": [
+      3.8,
+      1.72,
+      31
+    ],
+    "target": [
+      7.1,
+      2,
+      28
+    ]
+  },
+  "seasons": [
+    {
+      "id": "spring",
+      "name": "Spring",
+      "italian": "La primavera",
+      "center": 24,
+      "color": "#59684b",
+      "rv": "RV 269",
+      "key": "E mayor",
+      "position": [
+        0,
+        1.72,
+        30
+      ],
+      "target": [
+        -5,
+        3.2,
+        22
+      ],
+      "paintings": [
+        {
+          "position": [
+            -10.42,
+            3.65,
+            28
+          ],
+          "side": -1
+        },
+        {
+          "position": [
+            -10.42,
+            3.65,
+            20
+          ],
+          "side": -1
+        },
+        {
+          "position": [
+            10.42,
+            3.65,
+            20
+          ],
+          "side": 1
+        }
+      ]
+    },
+    {
+      "id": "summer",
+      "name": "Summer",
+      "italian": "L’estate",
+      "center": 8,
+      "color": "#a0783d",
+      "rv": "RV 315",
+      "key": "G minor",
+      "position": [
+        0,
+        1.72,
+        14
+      ],
+      "target": [
+        -5,
+        3.2,
+        6
+      ],
+      "paintings": [
+        {
+          "position": [
+            -10.42,
+            3.65,
+            12
+          ],
+          "side": -1
+        },
+        {
+          "position": [
+            -10.42,
+            3.65,
+            4
+          ],
+          "side": -1
+        },
+        {
+          "position": [
+            10.42,
+            3.65,
+            4
+          ],
+          "side": 1
+        }
+      ]
+    },
+    {
+      "id": "autumn",
+      "name": "Autumn",
+      "italian": "L’autunno",
+      "center": -8,
+      "color": "#985633",
+      "rv": "RV 293",
+      "key": "F mayor",
+      "position": [
+        0,
+        1.72,
+        -2
+      ],
+      "target": [
+        -5,
+        3.2,
+        -10
+      ],
+      "paintings": [
+        {
+          "position": [
+            -10.42,
+            3.65,
+            -4
+          ],
+          "side": -1
+        },
+        {
+          "position": [
+            -10.42,
+            3.65,
+            -12
+          ],
+          "side": -1
+        },
+        {
+          "position": [
+            10.42,
+            3.65,
+            -12
+          ],
+          "side": 1
+        }
+      ]
+    },
+    {
+      "id": "winter",
+      "name": "Winter",
+      "italian": "L’inverno",
+      "center": -24,
+      "color": "#647b86",
+      "rv": "RV 297",
+      "key": "F minor",
+      "position": [
+        0,
+        1.72,
+        -18
+      ],
+      "target": [
+        -5,
+        3.2,
+        -26
+      ],
+      "paintings": [
+        {
+          "position": [
+            -10.42,
+            3.65,
+            -20
+          ],
+          "side": -1
+        },
+        {
+          "position": [
+            -10.42,
+            3.65,
+            -28
+          ],
+          "side": -1
+        },
+        {
+          "position": [
+            10.42,
+            3.65,
+            -28
+          ],
+          "side": 1
+        }
+      ]
+    }
+  ]
+}
