@@ -1,5 +1,5 @@
 {
-  "name": "ruang-dengar",
+  "name": "vivaldi-gallery",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -26,5 +26,19 @@
     "vite": "8.0.13",
     "@typescript-eslint/parser": "8.72.1",
     "@typescript-eslint/eslint-plugin": "8.72.1"
-  }
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "description": "Independent noncommercial Vivaldi Four Seasons 3D music gallery",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhpbuild/Vivaldi-Gallery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhpbuild/Vivaldi-Gallery/issues"
+  },
+  "homepage": "https://github.com/mhpbuild/Vivaldi-Gallery#readme",
+  "author": "mhpbuild"
 }

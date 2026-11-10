@@ -18,7 +18,7 @@ Recorded, produced and published by Gregor Quendel. Arrangement credits as liste
 License: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
 https://creativecommons.org/licenses/by-nc/4.0/
 
-The additional recordings are included in this noncommercial local gallery prototype. The souvenir checkout is fictional and collects no money. A commercial use of these additional recordings requires permission consistent with their license.
+The additional recordings are included in this noncommercial, publicly shared hobby gallery. The souvenir checkout is fictional and collects no money. A commercial use of these additional recordings requires permission consistent with their license.
 
 ## Track manifest
 
@@ -57,3 +57,9 @@ The twelve seasonal paintings are new ImageGen illustrations inspired by the the
 The expanded 22 × 64 m museum, violin sculpture, furniture, framing and lighting were built locally in Blender. The violin is a new modeled interpretation, not a scan of an authenticated instrument owned by Vivaldi.
 
 Typography: Cinzel, Cormorant Garamond and DM Sans via Google Fonts. Souvenir products are fictional art objects; the demo music is not sold with them.
+
+## License scope and earlier prototype material
+
+The MIT license applies to original software, not the recordings or historical portraits. Original project visuals and modeling follow ASSET_LICENSES.md. Music and other third-party rights remain with their creators. Full license texts are in licenses/. Earlier prototype files removed from the current tree remain in Git history; their attribution is preserved in THIRD_PARTY_NOTICES.md.
+
+No affiliation, sponsorship or endorsement by any credited party is implied. This is an independent, peaceful fan project for learning and appreciation. Peace ✌🏻

@@ -3,7 +3,7 @@
 :root{--paper:#eee5cf;--ink:#3c3325;--muted:#74664e;--rust:#84602c;--line:#c7b793;--serif:'Cormorant Garamond',Georgia,serif;color:var(--ink);background:#eee5cf}
 body{background:var(--paper)}
 .app{grid-template-rows:76px minmax(360px,1fr) 62px 88px 26px}
-.site-header,.room-navigation,.music-player,.site-footer,.drawer,.drawer-surface,.explore-label,.station-card{background-color:var(--paper);background-image:url('/art/leonardo-parchment.png');background-size:750px auto}
+.site-header,.room-navigation,.music-player,.site-footer,.drawer,.drawer-surface,.explore-label,.station-card{background-color:var(--paper);background-image:url('/art/parchment.png');background-size:750px auto}
 .site-header,.room-navigation,.music-player,.site-footer,.drawer,.drawer-surface,.explore-label,.station-card{background-blend-mode:soft-light}
 .site-header{padding:0 30px;gap:24px;border-bottom:3px double #ae9561;box-shadow:0 2px 7px #1c1b192b}
 .brand{font-family:'Cinzel',Georgia,serif;font-size:21px;letter-spacing:1.7px;gap:13px;min-width:242px;font-weight:500;white-space:nowrap}

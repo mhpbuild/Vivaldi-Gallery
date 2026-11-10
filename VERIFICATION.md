@@ -1,6 +1,6 @@
 # Verification — Vivaldi: The Four Seasons
 
-Verified locally on 10 November 2026. This is a local preview; no commit, push or deployment was made.
+Verified locally on 10 November 2026. The interface was verified locally before publication. Repository publication and website hosting are separate; no website deployment is claimed.
 
 ## Build and assets
 
@@ -29,6 +29,10 @@ Native dialog focus trapping and Escape dismissal were checked. Controls have la
 
 ## Review and evidence
 
-Reviewed the source changes, local asset manifest, licence distinctions, credits and model exhibit metadata. No old Leonardo artwork remains in the active Vivaldi interface. The workspace has no Git repository or baseline diff; source and generated assets were reviewed directly as a new local project.
+Reviewed the source changes, local asset manifest, licence distinctions, credits and model exhibit metadata. No old Leonardo artwork remains in the active Vivaldi interface. The initial interface was reviewed as a new local project. The subsequent public-release changes are reviewed against the initial Git commit.
 
-Screenshots in the parent `outputs/` directory: `vivaldi-gallery-desktop.jpg`, `vivaldi-spring-desktop.jpg`, `vivaldi-gallery-mobile.jpg` and `vivaldi-collection-mobile.jpg`. The editable Blender master, baked derivative and Cycles preview are in this project's `blender/` directory.
+The release screenshot is `docs/images/gallery.jpg`. Additional development screenshots remain outside the public repository. The editable Blender master, baked derivative and Cycles preview are in this project's `blender/` directory.
+
+## Public-release validation
+
+The curation, licenses, retained-history scope and rerun checks are recorded in [PUBLIC_RELEASE.md](PUBLIC_RELEASE.md). The web model and current Blender files are unchanged by that release.

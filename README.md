@@ -1,48 +1,42 @@
-# Vivaldi — The Four Seasons | Ars Sonora
+# Vivaldi Gallery · The Four Seasons
 
-An online music gallery built with React, Three.js and Blender. The complete reference catalog contains 20 local MP3 recordings (approximately 98 minutes): 12 movements of the four concertos, plus 8 additional interpretations.
+[![CI](https://github.com/mhpbuild/Vivaldi-Gallery/actions/workflows/ci.yml/badge.svg)](https://github.com/mhpbuild/Vivaldi-Gallery/actions/workflows/ci.yml)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![Media: separate licenses](https://img.shields.io/badge/media-separate_licenses-795b35.svg)](ASSET_LICENSES.md)
 
-## Local preview
+Galeri musik 3D untuk menikmati **Antonio Vivaldi — The Four Seasons**. Dibangun dengan React, Three.js, TypeScript, dan Blender: empat galeri musim, 20 rekaman, sekitar 98 menit musik, dan toko suvenir simulasi.
+
+## Dari programmer yang cinta Vivaldi
+
+> Proyek ini dibuat oleh seorang programmer yang mencintai musik Vivaldi, sebagai eksperimen pribadi di waktu luang. Tidak ada niat menjatuhkan, meremehkan, menyindir, menyerang, atau merugikan pihak mana pun. Murni proyek gabut yang damai untuk belajar, bereksperimen, dan berbagi apresiasi musik. **Peace ✌🏻**
+>
+> Ini proyek penggemar yang independen. Tidak mewakili, berafiliasi dengan, disponsori, atau disahkan oleh musisi, pemegang hak, institusi, perusahaan, maupun situs sumber yang disebutkan. Semua kredit tetap milik penciptanya. Toko dan transaksi di dalam galeri sepenuhnya simulasi.
+
+*An independent, noncommercial hobby project by a programmer who loves Vivaldi. Made for learning and appreciation, with respect for everyone and no intent to disparage anyone. Peace ✌🏻*
+
+![Galeri Spring dengan lukisan interaktif dan pemutar musik](docs/images/gallery.jpg)
+
+## Yang bisa dicoba
+
+- Museum virtual 22 × 64 meter (1.408 m²), empat ruang musim, 12 lukisan gerakan, dan empat meja interpretasi.
+- Klik lukisan untuk memutar musik. Cari, filter per musim, atau unduh rekaman beserta rujukan lisensinya.
+- Jelajah dengan WASD/panah, tahan Shift untuk lebih cepat, seret untuk melihat; tersedia tombol arah di ponsel.
+- Pemutar dengan seek, volume, shuffle, repeat, serta pilihan file musik pribadi yang diputar lokal.
+- Toko suvenir, keranjang, dan checkout demo tanpa uang, data pembayaran, atau pengiriman nyata.
+- Model Blender yang bisa diedit, GLB untuk web, serta layout dan katalog dalam JSON.
+
+## Jalankan sendiri
+
+Gunakan **Node.js 24** (atau 22.18+) dan npm. Git LFS tidak diperlukan. Clone cukup besar karena memuat rekaman dan model Blender.
 
 ```sh
-npm install
+git clone --depth 1 https://github.com/mhpbuild/Vivaldi-Gallery.git
+cd Vivaldi-Gallery
+npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:5174/. Requires Node.js 22.18+ or 24+. This workspace reuses previously installed dependencies via a local node_modules symlink; a clean lockfile is included for an independent install. This site has not been published or deployed.
-
-## The expanded museum
-
-The model has a 22 × 64 metre floor (1,408 m²), four sequential season galleries, twelve dedicated movement paintings, five historical portrait displays, four interpretation desks and an entrance shop. It has more than twice the previous gallery's modeled floor area. The interpretation desks accommodate the additional versions in each season: Spring 2, Summer 3, Autumn 1, Winter 2.
-
-Walk with WASD or arrow keys, hold Shift for speed, drag to look, or hold the on-screen direction controls on mobile. Gallery navigation provides direct arrivals. Walls, the instrument plinth, benches, shop and interpretation desks have collision footprints.
-
-Click a seasonal painting to play its movement. Each season panel lists the three main movements and opens the full season catalog. The collection supports season filtering, search, per-recording download, local personal audio, playback, seek, volume, shuffle and repeat.
-
-## Recording rights
-
-Tracks 01–12: John Harrison, Robert Turizziani and The Wichita State University Chamber Players, CC BY-SA 4.0. Tracks 13–20: Gregor Quendel, CC BY-NC 4.0. The latter recordings are for noncommercial use under their stated license. The fictional shop never collects money. Full source links, credits, license links and an unchanged-file manifest are in CREDITS.md and public/audio/vivaldi/.
-
-## Editable assets
-
-- blender/Vivaldi-Four-Seasons-Museum.blend: editable master scene.
-- blender/Vivaldi-Four-Seasons-Web.blend: baked web variant.
-- blender/vivaldi-museum-preview.png: Cycles architectural render.
-- public/models/vivaldi-four-seasons.glb: compressed web model.
-- src/catalog.json: all 20 recordings and season metadata.
-- src/layout.json: shared physical dimensions, arrivals and painting locations, used by Blender and frontend navigation.
-
-Rebuild in this order with the installed Blender application:
-
-```sh
-/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/build_vivaldi.py -- --render-preview
-/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/bake_vivaldi.py
-/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/denoise_vivaldi.py
-```
-
-The builder uses the original project modeling utilities in build_museum.py. Paintings and portraits retain their original UVs; architecture uses a Cycles lighting atlas cleaned in Blender's compositor. Metallic framing retains PBR highlights. A subtle floor reflection is rendered in Three.js. Browser output and the Cycles reference use different render pipelines and are not pixel-identical.
-
-## Verification
+Buka <http://127.0.0.1:5174/>. Perlu browser dengan WebGL. Repositori public ini menyediakan kode dan aset; publikasi repositori tidak otomatis membuat website live.
 
 ```sh
 npm run lint
@@ -51,4 +45,49 @@ npm test
 npm run build
 ```
 
-Twelve tests check cart pricing/removal, all audio files and licenses, the full catalog, season grouping, physical capacity, safe arrival points, WASD heading, diagonal speed, Shift, bounds, collision and frame-time limits. Static output is in dist/. Audio is not preloaded; 3D is loaded separately with progress feedback. Rendering resolution, reflections and shadows are capped on mobile. Rendering pauses when the scene is unchanged.
+Hasil build ada di `dist/`. Untuk hosting pada subfolder, sesuaikan konfigurasi base URL dan jalur aset terlebih dahulu. Model web sekitar 18 MiB, sehingga pemuatan awal bergantung pada koneksi; audio tidak diunduh seluruhnya saat membuka halaman.
+
+## Lisensi: kode dan media berbeda
+
+**MIT berlaku untuk kode, bukan otomatis untuk seluruh musik dan gambar.**
+
+| Bagian | Lisensi / status |
+| --- | --- |
+| Kode aplikasi, skrip Blender, pengujian, dan dokumentasi asli | [MIT](LICENSE), © 2026 mhpbuild |
+| Rekaman 01–12, John Harrison / Robert Turizziani / WSU Chamber Players | [CC BY-SA 4.0](licenses/CC-BY-SA-4.0.txt) |
+| Rekaman 13–20, Gregor Quendel | [CC BY-NC 4.0](licenses/CC-BY-NC-4.0.txt), **hanya nonkomersial** |
+| Model, tekstur prosedural, dan ilustrasi asli proyek | [CC BY 4.0](licenses/CC-BY-4.0.txt), sebatas hak yang dimiliki kontributor |
+| Dua potret historis Vivaldi | Domain publik, dengan sumber di [CREDITS.md](CREDITS.md) |
+
+Rekaman berasal dari [Classicals.de](https://www.classicals.de/vivaldi-seasons), digunakan utuh tanpa penyuntingan. Lisensi kode MIT tidak memberikan izin komersial atas delapan rekaman CC BY-NC. Untuk penggunaan komersial, ganti rekaman tersebut atau dapatkan izin yang sesuai dari pemegang hak. Komposisi yang tua tidak otomatis membuat rekaman modern menjadi domain publik.
+
+Baca [rincian lisensi aset](ASSET_LICENSES.md), [kredit setiap rekaman](CREDITS.md), dan [pemberitahuan pihak ketiga](THIRD_PARTY_NOTICES.md) sebelum mendistribusikan ulang. Ilustrasi musim dibuat dengan bantuan AI; bukan karya historis Vivaldi atau pelukis lama. Model instrumen merupakan interpretasi, bukan pemindaian instrumen autentik.
+
+## Struktur dan Blender
+
+| Lokasi | Isi |
+| --- | --- |
+| `src/` | Antarmuka, navigasi, pemutar, katalog, dan layout |
+| `public/audio/vivaldi/` | 20 MP3, kredit, dan checksum SHA-256 |
+| `public/art/` | Ilustrasi musim, potret, dan tekstur kertas |
+| `public/models/vivaldi-four-seasons.glb` | Model siap pakai untuk web |
+| `blender/` | Master, versi baked, skrip pembuatan, dan render |
+| `tests/` | Pengujian katalog, kapasitas, navigasi, dan keranjang |
+
+Master: `blender/Vivaldi-Four-Seasons-Museum.blend`. Versi baked: `blender/Vivaldi-Four-Seasons-Web.blend`. Gunakan Blender 5.2+ untuk membangun ulang:
+
+```sh
+blender --background --factory-startup --python blender/build_vivaldi.py -- --render-preview
+blender --background --factory-startup --python blender/bake_vivaldi.py
+blender --background --factory-startup --python blender/denoise_vivaldi.py
+```
+
+Di macOS, ganti `blender` dengan executable di dalam aplikasi Blender bila belum tersedia di PATH. `build_museum.py` dipertahankan sebagai utilitas geometri yang dipakai builder Vivaldi; hasil percobaan museum lama tidak termasuk versi aktif. Gambar model sudah packed. File font sistem tidak didistribusikan; builder memakai font sistem yang tersedia atau font bawaan Blender. Render Cycles dan tampilan browser memakai pipeline yang berbeda.
+
+## Privasi, kontribusi, dan pemeliharaan
+
+File musik pribadi dimainkan melalui object URL di browser dan tidak diunggah. Keranjang demo tersimpan di localStorage. Google Fonts dimuat dari layanan eksternal. Tidak ada backend pembayaran.
+
+Silakan buka issue atau pull request sesuai [CONTRIBUTING.md](CONTRIBUTING.md). Jaga suasana sesuai [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Untuk kerentanan, baca [SECURITY.md](SECURITY.md). Ini proyek hobi yang disediakan apa adanya, tanpa jaminan dukungan atau ketepatan sejarah.
+
+Pengembangan berikutnya menggunakan commit dan **push biasa** ke `main`, atau branch dan pull request. Tidak memakai `git push --mirror`. Riwayat awal tetap dipertahankan; kredit aset percobaan yang masih dapat ditemukan di riwayat tersedia di [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
